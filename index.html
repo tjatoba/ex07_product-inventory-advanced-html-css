@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Gerenciamento de Estoque</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gerenciamento de Estoque</h1>
+    <button onclick="openForm()">Adicionar Peça</button>
+    <div id="form-container" style="display: none;">
+      <form id="inventoryForm">
+        <label for="type">Tipo:</label>
+        <input type="text" id="type" required>
+
+        <label for="size">Tamanho:</label>
+        <input type="text" id="size" required>
+
+        <label for="color">Cor:</label>
+        <input type="text" id="color" required>
+
+        <label for="reference">Referência:</label>
+        <input type="text" id="reference" required>
+
+        <button type="button" onclick="addItem()">Adicionar Item</button>
+        <button type="button" onclick="closeForm()">Cancelar</button>
+      </form>
+    </div>
+
+    <div id="inventory-list">
+      <h2>Lista de Peças</h2>
+      <ul id="item-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
